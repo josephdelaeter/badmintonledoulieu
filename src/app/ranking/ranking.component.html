@@ -1,0 +1,40 @@
+<div class="md:container md:mx-auto md:w-1/2 mt-8 rounded shadow-medium" style="height: 800px;">
+  <div class="w-full px-4 py-4">
+    <p class="font-bold">Classement</p>
+  </div>
+  <div class="flex px-4">
+    <div class="w-full">
+      <div class="rounded-lg" >
+        <div class="overflow-y-scroll scrollbared border rounded" style="height: 720px;">
+          <table class="w-full text-left table-fixed">
+            <thead>
+              <th class=""></th>
+              <th class="w-1/2 py-2 font-medium">Nom</th>
+              <th class="py-2 font-medium">pts</th>
+              <th class="py-2 font-medium">J.</th>
+              <th class="py-2 font-medium text-zestGreen">G.</th>
+              <th class="py-2 font-medium text-techRed">P.</th>
+              <th class="py-2 font-medium">p.</th>
+              <th class="py-2 font-medium">c.</th>
+              <th class="py-2 font-medium">+/-</th>
+
+            </thead>
+            <tbody >
+              <tr *ngFor="let joueur of joueurs;index as i">
+                <td class="py-4 text-center text-darkGray font-bold">{{i+1}}</td>
+                <td class="py-4 font-bold">{{ joueur.nom }} {{ joueur.prenom }}</td>
+                <td class="py-4 font-bold">{{ joueur.nbPoint }}</td>
+                <td class="py-4 ">{{ joueur.nbMatch }}</td>
+                <td class="py-4 ">{{ joueur.nbVictoire }}</td>
+                <td class="py-4 ">{{ joueur.nbDefaite }}</td>
+                <td class="py-4 ">{{ joueur.pointPour }}</td>
+                <td class="py-4 ">{{ joueur.pointContre }}</td>
+                <td class="py-4 ">{{ joueur.differencePoints }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
