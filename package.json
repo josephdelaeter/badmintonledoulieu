@@ -3,12 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ngcc"
+    "postinstall": "ngcc",
+    "heroku-postbuild": "ng build --prod"
   },
   "engines": {
     "node": "12.19.0",
@@ -18,10 +19,10 @@
   "dependencies": {
     "@angular/animations": "~11.0.0",
     "@angular/cdk": "^11.0.1",
-    "@angular/cli": "^11.1.2",
+    "@angular/cli": "^11.1.4",
     "@angular/common": "^11.0.2",
     "@angular/compiler": "~11.0.0",
-    "@angular/compiler-cli": "^11.0.9",
+    "@angular/compiler-cli": "^11.1.2",
     "@angular/core": "~11.0.0",
     "@angular/forms": "~11.0.0",
     "@angular/material": "^11.0.1",
@@ -39,8 +40,8 @@
   "devDependencies": {
     "@angular-builders/custom-webpack": "^10.0.1",
     "@angular-devkit/build-angular": "~0.1100.0",
-    "@angular/cli": "^11.1.2",
-    "@angular/compiler-cli": "^11.0.9",
+    "@angular/cli": "^11.1.4",
+    "@angular/compiler-cli": "^11.1.2",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
