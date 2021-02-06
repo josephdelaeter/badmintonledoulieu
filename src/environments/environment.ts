@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  api_base_url: 'http://kickiplume-back.herokuapp.com'
+  api_base_url: 'https://kickiplume-back.herokuapp.com'
 };
 
 /*
