@@ -6,10 +6,9 @@
     "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
+    "postinstall": "ng build --aot --prod",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "preinstall": "npm i -g http-server && npm i -g @angular/cli",
-    "postinstall": "ng build --target=production -e ${NODE_ENV:-production} --aot"
+    "e2e": "ng e2e"
   },
   "engines": {
     "node": "12.19.0",
