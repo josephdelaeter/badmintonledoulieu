@@ -1,85 +1,65 @@
 <div class="container mx-auto w-1/2 mt-8 p-4" style="height: 800px;">
-    <div class="w-full h-1/6 text-center border shadow-medium ">
-        <p class="text-4xl font-bold pt-8">Versus</p>
-    </div>
-    <div class="w-full flex h-4/6">
-        <div class="w-1/2 border rounded shadow-medium p-4 text-center">
-            <div class="w-1/2 mx-auto">
-                <p class="font-bold">Nom du joueur 1</p>
-                <form>
-                  <mat-form-field >
-                    <input class="mt-2 mb-6 px-4 py-2 border rounded-lg" 
-                          [(ngModel)]="valueInput1"
-                          type="text"
-                           placeholder="Nom du joueur 1"
-                           aria-label="Number"
-                           matInput
-                           [formControl]="myControl"
-                           [matAutocomplete]="auto">
-                    <mat-autocomplete #auto="matAutocomplete">
-                      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-                        {{option}}
-                      </mat-option>
-                    </mat-autocomplete>
-                  </mat-form-field>
-                </form>
-                <div class="mt-6">
-                    <label class="text-gray-600 font-light ">Résultat manche 1</label>
-                    <input [(ngModel)]="score1jrs1" class="border" type='text' placeholder="Score joueur 1"
-                        class="w-full mt-2 mb-6 px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-green-500" />
-                </div>
-                <div class="mt-6">
-                    <label class="text-gray-600 font-light">Résultat manche 2</label>
-                    <input [(ngModel)]="score2jrs1" type='text' placeholder="Score joueur 1"
-                        class="w-full mt-2 mb-6 px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-green-500" />
-                </div>
-                <div class="mt-6">
-                    <label class="text-gray-600 font-light">Résultat manche 3</label>
-                    <input [(ngModel)]="score3jrs1" type='text' placeholder="Score joueur 1"
-                        class="w-full mt-2 mb-6 px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-green-500" />
-                </div>
-            </div>
+  <div class="w-full h-1/6 text-center border shadow-medium ">
+    <p class="text-4xl font-bold pt-8">Versus</p>
+  </div>
+  <div class="w-full flex h-4/6">
+    <div class="w-1/2 border rounded shadow-medium p-4 text-center">
+      <div class="w-1/2 mx-auto">
+        <p class="font-bold">Nom du joueur 1</p>
+        <div>
+          <label class="block mt-6 border rounded text-gray-600 ">
+            <select class="form-select block w-full px-4 py-2" [(ngModel)]="selectedPlayerOne">
+              <option *ngFor="let option of options">{{option}}</option>
+            </select>
+          </label>
         </div>
-        <div class="w-1/2 border rounded shadow-medium p-4 text-center">
-            <div class="w-1/2 mx-auto">
-                <p class="font-bold">Nom du joueur 2</p>
-                <form>
-                    <mat-form-field >
-                      <input class="mt-2 mb-6 px-4 py-2 border rounded-lg" 
-                            [(ngModel)]="valueInput2"
-                            type="text"
-                             placeholder="Nom du joueur 1"
-                             aria-label="Number"
-                             matInput
-                             [formControl]="myControl"
-                             [matAutocomplete]="auto">
-                      <mat-autocomplete #auto="matAutocomplete">
-                        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-                          {{option}}
-                        </mat-option>
-                      </mat-autocomplete>
-                    </mat-form-field>
-                  </form>
-                <div class="mt-6">
-                    <label class="text-gray-600 font-light ">Résultat manche 1</label>
-                    <input [(ngModel)]="score1jrs2" class="border" type='text' placeholder="Score joueur 2"
-                        class="w-full mt-2 mb-6 px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-green-500" />
-                </div>
-                <div class="mt-6">
-                    <label class="text-gray-600 font-light">Résultat manche 2</label>
-                    <input [(ngModel)]="score2jrs2" type='text' placeholder="Score joueur 2"
-                        class="w-full mt-2 mb-6 px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-green-500" />
-                </div>
-                <div class="mt-6">
-                    <label class="text-gray-600 font-light">Résultat manche 3</label>
-                    <input [(ngModel)]="score3jrs2" type='text' placeholder="Score joueur 2"
-                        class="w-full mt-2 mb-6 px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-green-500" />
-                </div>
-            </div>
+        <div class="mt-6">
+          <label class="text-gray-600 font-light ">Résultat manche 1</label>
+          <input [(ngModel)]="score1jrs1" class="border" type='text' placeholder="Score joueur 1"
+            class="w-full mt-2 mb-6 px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-green-500" />
         </div>
+        <div class="mt-6">
+          <label class="text-gray-600 font-light">Résultat manche 2</label>
+          <input [(ngModel)]="score2jrs1" type='text' placeholder="Score joueur 1"
+            class="w-full mt-2 mb-6 px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-green-500" />
+        </div>
+        <div class="mt-6">
+          <label class="text-gray-600 font-light">Résultat manche 3</label>
+          <input [(ngModel)]="score3jrs1" type='text' placeholder="Score joueur 1"
+            class="w-full mt-2 mb-6 px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-green-500" />
+        </div>
+      </div>
     </div>
-    <div class="w-full h-1/6 text-center border shadow-medium ">
-        <button type="button" (click)="onClick()" [routerLink]="['/ranking']"
-            class="bg-blue-600 text-gray-200 text-lg rounded hover:bg-blue-500 px-6 py-3 focus:outline-none mt-10">Valider</button>
+    <div class="w-1/2 border rounded shadow-medium p-4 text-center">
+      <div class="w-1/2 mx-auto">
+        <p class="font-bold">Nom du joueur 2</p>
+        <div>
+          <label class="block mt-6 border rounded text-gray-600 ">
+            <select class="form-select block w-full px-4 py-2" [(ngModel)]="selectedPlayerTwo">
+              <option *ngFor="let option of options">{{option}}</option>
+            </select>
+          </label>
+        </div>
+        <div class="mt-6">
+          <label class="text-gray-600 font-light ">Résultat manche 1</label>
+          <input [(ngModel)]="score1jrs2" class="border" type='text' placeholder="Score joueur 2"
+            class="w-full mt-2 mb-6 px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-green-500" />
+        </div>
+        <div class="mt-6">
+          <label class="text-gray-600 font-light">Résultat manche 2</label>
+          <input [(ngModel)]="score2jrs2" type='text' placeholder="Score joueur 2"
+            class="w-full mt-2 mb-6 px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-green-500" />
+        </div>
+        <div class="mt-6">
+          <label class="text-gray-600 font-light">Résultat manche 3</label>
+          <input [(ngModel)]="score3jrs2" type='text' placeholder="Score joueur 2"
+            class="w-full mt-2 mb-6 px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-green-500" />
+        </div>
+      </div>
     </div>
+  </div>
+  <div class="w-full h-1/6 text-center border shadow-medium ">
+    <button type="button" (click)="onClick()"
+      class="bg-blue-600 text-gray-200 text-lg rounded hover:bg-blue-500 px-6 py-3 focus:outline-none mt-10">Valider</button>
+  </div>
 </div>

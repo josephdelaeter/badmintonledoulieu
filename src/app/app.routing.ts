@@ -12,6 +12,7 @@ import { ResultComponent } from './result/result.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'header', component: HeaderComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
