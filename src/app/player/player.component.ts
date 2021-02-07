@@ -8,8 +8,8 @@ import { JoueursService } from '../../services/joueurs.service';
 })
 export class PlayerComponent implements OnInit {
 
-  public lastname = " "
-  public firstname = " "
+  public lastname = ""
+  public firstname = ""
 
   constructor(private jou: JoueursService) { }
 
@@ -17,7 +17,8 @@ export class PlayerComponent implements OnInit {
   }
 
   add() {
-    this.jou.postNewPlayer(this.lastname)
+    const name = this.lastname + " " + this.firstname
+    this.jou.postNewPlayer(name)
   }
 
 }
