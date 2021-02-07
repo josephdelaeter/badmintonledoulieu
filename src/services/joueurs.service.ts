@@ -22,11 +22,11 @@ export class JoueursService {
 
   postNewPlayer(lastNameAndFirstName: string) {
 
-    const split = lastNameAndFirstName.split(' ')
+    const split = lastNameAndFirstName.split(" ")
     const lastName = split[0]
     const firstName = split[1]
 
-    return this.http.post<any>(`${environment.api_base_url}/posts`,
+    return this.http.post<any>(`${environment.api_base_url}/player/`,
       {
         "nom": lastName,
         "prenom": firstName,

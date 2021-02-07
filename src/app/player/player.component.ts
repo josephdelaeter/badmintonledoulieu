@@ -8,8 +8,8 @@ import { JoueursService } from '../../services/joueurs.service';
 })
 export class PlayerComponent implements OnInit {
 
-  public lastname = ""
-  public firstname = ""
+  public lastname:string
+  public firstname:string
 
   constructor(private jou: JoueursService) { }
 
