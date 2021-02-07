@@ -1,0 +1,40 @@
+<div class="shadow-medium p-10 bg-white max-w-xl rounded mx-auto mt-8">
+    <h1 class="text-4xl font-black mb-4">Ajouter un joueur</h1>
+    <div class="mb-4 relative mt-8">
+        <input [(ngModel)]='lastname' class="input border border-gray-400 appearance-none rounded w-full px-3 py-3 pt-5 pb-2 focus focus:border-indigo-600 focus:outline-none active:outline-none active:border-indigo-600"  type="text" autofocus>
+        <label for="email" class="label absolute mb-0 -mt-2 pt-2 pl-3 leading-tighter text-gray-400 text-base mt-4 cursor-text">Nom</label>
+    </div>
+    <div class="mb-4 relative mt-8">
+        <input [(ngModel)]='firstname' class="input border border-gray-400 appearance-none rounded w-full px-3 py-3 pt-5 pb-2 focus focus:border-indigo-600 focus:outline-none active:outline-none active:border-indigo-600"  type="text" autofocus>
+        <label for="email" class="label absolute mb-0 -mt-2 pt-2 pl-3 leading-tighter text-gray-400 text-base mt-4 cursor-text">Prenom</label>
+    </div>
+    <button class="bg-indigo-600 hover:bg-blue-dark text-white font-bold py-3 px-6 rounded" (click)="add()">Ajouter</button>
+</div>
+
+<script>
+    var toggleInputContainer = function (input) {
+        if (input.value != "") {
+            input.classList.add('filled');
+        } else {
+            input.classList.remove('filled');
+        }
+    }
+
+    var labels = document.querySelectorAll('.label');
+    for (var i = 0; i < labels.length; i++) {
+        labels[i].addEventListener('click', function () {
+            this.previousElementSibling.focus();
+        });
+    }
+
+    window.addEventListener("load", function () {
+        var inputs = document.getElementsByClassName("input");
+        for (var i = 0; i < inputs.length; i++) {
+            console.log('looped');
+            inputs[i].addEventListener('keyup', function () {
+                toggleInputContainer(this);
+            });
+            toggleInputContainer(inputs[i]);
+        }
+    });
+</script>

@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
-import { Observable } from 'rxjs';
-import { map, startWith } from 'rxjs/operators';
 import { JoueursService } from 'src/services/joueurs.service';
 import { MatchsService } from 'src/services/matchs.service';
 
@@ -27,18 +24,14 @@ export class MatchComponent implements OnInit {
   public scoreManche2 = ""
   public scoreManche3 = ""
 
-
-
   options = [];
   players;
-
 
   constructor(private jou: JoueursService, private mat: MatchsService) { }
 
   ngOnInit(): void {
     this.getList()
   }
-
 
   getList() {
     this.jou.getList().subscribe(
