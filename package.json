@@ -28,6 +28,7 @@
     "@angular/platform-browser": "~11.1.2",
     "@angular/platform-browser-dynamic": "~11.1.2",
     "@angular/router": "^11.1.2",
+    "@danielfarrell/bootstrap-combobox": "^1.1.8",
     "express": "^4.17.1",
     "path": "^0.12.7",
     "rxjs": "~6.6.0",
