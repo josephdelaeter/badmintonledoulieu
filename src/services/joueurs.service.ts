@@ -26,7 +26,7 @@ export class JoueursService {
     const lastName = split[0]
     const firstName = split[1]
 
-    return this.http.post<any>(`${environment.api_base_url}/player/`,
+    return this.http.post<any>(`${environment.api_base_url}/player`,
       {
         "nom": lastName,
         "prenom": firstName,
