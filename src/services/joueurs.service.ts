@@ -51,7 +51,7 @@ export class JoueursService {
       observe: 'response' as 'body'
     };
 console.log(playerOne + playerTwo + scoreOne)
-    return this.http.post<any>(`${environment.api_base_url}/player/` + playerOne + "/" + playerTwo + "/" + scoreOne + "/" + scoreTwo + "/" + scoreThree, httpOptions).subscribe()
+    return this.http.post<any>(`${environment.api_base_url}/player` + playerOne + "/" + playerTwo + "/" + scoreOne + "/" + scoreTwo + "/" + scoreThree, httpOptions).subscribe()
   }
 
 }
