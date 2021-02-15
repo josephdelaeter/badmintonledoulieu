@@ -19,6 +19,7 @@ import { RankingComponent } from './ranking/ranking.component';
 import { InfosComponent } from './infos/infos.component';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { PlayerComponent } from './player/player.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { PlayerComponent } from './player/player.component';
     ResultComponent,
     MatchComponent,
     InfosComponent,
-    PlayerComponent
+    PlayerComponent,
+    FooterComponent
  
   ],
   imports: [

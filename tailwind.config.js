@@ -30,7 +30,8 @@ module.exports = {
         'danger': '#e3342f',
       }),
       boxShadow: {
-        medium: '0px 0px 10px 5px rgba(0, 0, 0, 0.1)' //décalage x,y,puissance dégragé,taille ombre
+        medium: '0px 17px 10px -10px rgba(0,0,0,0.4)',
+        border:'3px solid black'
       }
     },
   },
