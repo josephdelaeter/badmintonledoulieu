@@ -43,15 +43,14 @@ export class JoueursService {
   }
 
   updateMatch(playerOne: string, playerTwo: string, scoreOne: string, scoreTwo: string, scoreThree: string) {
-
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       }),
       observe: 'response' as 'body'
     };
-console.log(playerOne + playerTwo + scoreOne)
-    return this.http.post<any>(`${environment.api_base_url}/player` + playerOne + "/" + playerTwo + "/" + scoreOne + "/" + scoreTwo + "/" + scoreThree, httpOptions).subscribe()
+    console.log(playerOne + playerTwo +" "+scoreOne)
+    return this.http.post<any>(`${environment.api_base_url}/player/` + playerOne + "/" + playerTwo + "/" + scoreOne + "/" + scoreTwo + "/" + scoreThree, httpOptions).subscribe()
   }
 
 }
