@@ -50,14 +50,13 @@ export class MatchComponent implements OnInit {
     )
   }
 
-  onClick(){
+   onClick(){
     this.scoreManche1 = this.score1jrs1 + ":" + this.score1jrs2
     this.scoreManche2 = this.score2jrs1 + ":" + this.score2jrs2
     this.scoreManche3 = this.score3jrs1 + ":" + this.score3jrs2
     console.log(this.selectedPlayerOne, this.selectedPlayerTwo, this.scoreManche1, this.scoreManche2, this.scoreManche3)
 
-     this.mat.postNewMatch(this.selectedPlayerOne, this.selectedPlayerTwo, this.scoreManche1, this.scoreManche2, this.scoreManche3)
-     console.log("testfdsfsdfsdfsdfsdf")
-     this.jou.updateMatch(this.selectedPlayerOne, this.selectedPlayerTwo, this.scoreManche1, this.scoreManche2, this.scoreManche3)
+      this.mat.postNewMatch(this.selectedPlayerOne, this.selectedPlayerTwo, this.scoreManche1, this.scoreManche2, this.scoreManche3)
+      this.jou.updateMatch(this.selectedPlayerOne, this.selectedPlayerTwo, this.scoreManche1, this.scoreManche2, this.scoreManche3)
   }
 }

@@ -1,0 +1,34 @@
+<div class="container mx-auto w-1/2 rounded shadow-medium mt-8 pt-48" style="height: 800px;">
+    <form class="container mx-auto h-1/2 w-1/2 p-8 rounded border-2 border-darkGray" [formGroup]="signupForm"
+        (ngSubmit)="registerUser()">
+        <p class="text-black text-center text-lg font-bold">Inscription</p>
+
+        <div class="mt-2">
+
+            <label class="block text-sm text-black">Nom</label>
+            <input class="w-full px-5 py-1 text-gray-700 bg-gray-300 rounded focus:outline-none focus:bg-white"
+                formControlName="name" type="text" placeholder="Entrez votre adresse email" required>
+
+        </div>
+
+        <div>
+
+            <label class="block text-sm text-black">Identifiant</label>
+            <input class="w-full px-5 py-1 text-gray-700 bg-gray-300 rounded focus:outline-none focus:bg-white"
+                formControlName="email" type="text" placeholder="Entrez votre adresse email" required>
+
+        </div>
+        <div class="mt-2">
+
+            <label class="block text-sm text-black">Mot de passe</label>
+            <input class="w-full px-5 py-1 text-gray-700 bg-gray-300 rounded focus:outline-none focus:bg-white"
+                formControlName="password" type="password" placeholder="Entrez votre mot de passe" required>
+
+        </div>
+
+        <div class="mt-4 items-center flex justify-between">
+            <button
+                class="px-4 py-1 text-white font-light tracking-wider bg-gray-900 hover:bg-gray-800 rounded">Valider</button>
+        </div>
+    </form>
+</div>
