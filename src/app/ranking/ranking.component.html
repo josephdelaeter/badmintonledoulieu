@@ -23,14 +23,14 @@
             <tbody >
               <tr *ngFor="let joueur of joueurs;index as i">
                 <td class="py-4 text-center text-darkGray font-bold">{{i+1}}</td>
-                <td class="py-4 font-bold">{{ joueur.nom }} {{ joueur.prenom }}</td>
+                <td class="py-4 font-bold">{{ joueur.lastName }} {{ joueur.firstName }}</td>
                 <td class="py-4 font-bold">{{ joueur.nbPoint }}</td>
                 <td class="py-4 ">{{ joueur.nbMatch }}</td>
-                <td class="py-4 ">{{ joueur.nbVictoire }}</td>
-                <td class="py-4 ">{{ joueur.nbDefaite }}</td>
-                <td class="py-4 ">{{ joueur.pointPour }}</td>
-                <td class="py-4 ">{{ joueur.pointContre }}</td>
-                <td class="py-4 ">{{ joueur.differencePoints }}</td>
+                <td class="py-4 ">{{ joueur.nbWin }}</td>
+                <td class="py-4 ">{{ joueur.nbLoose }}</td>
+                <td class="py-4 ">{{ joueur.pointFor }}</td>
+                <td class="py-4 ">{{ joueur.pointAgainst }}</td>
+                <td class="py-4 ">{{ joueur.pointDifference }}</td>
               </tr>
             </tbody>
           </table>

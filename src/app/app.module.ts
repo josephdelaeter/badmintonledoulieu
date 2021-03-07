@@ -46,8 +46,7 @@ import { AuthInterceptor } from 'src/shared/AuthInterceptor';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatAutocompleteModule,
-    ReactiveFormsModule
+    MatAutocompleteModule
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

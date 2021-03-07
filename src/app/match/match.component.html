@@ -11,7 +11,7 @@
             <select class="form-select block w-full px-4 py-2" 
                     [(ngModel)]="selectedPlayerOne">
                     <option value="">--Select--</option>
-                    <option *ngFor="let option of options">{{option}}</option>
+                    <option *ngFor="let option of options">{{option.lastName}} {{option.firstName}}</option>
             </select>
           </label>
         </div>
@@ -39,7 +39,7 @@
           <label class="block mt-6 rounded text-gray-600 ">
             <select class="form-select block w-full px-4 py-2" [(ngModel)]="selectedPlayerTwo">
               <option value="">--Select--</option>
-              <option *ngFor="let option of options">{{option}}</option>
+              <option *ngFor="let option of options">{{option.lastName}} {{option.firstName}}</option>
             </select>
           </label>
         </div>

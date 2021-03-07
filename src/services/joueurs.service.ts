@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -10,12 +11,11 @@ export class JoueursService {
   constructor(private http: HttpClient) {
   }
 
-  getList() {
+  getList():Observable<any> {
     return this.http.get(`${environment.api_base_url}/player`);
   }
 
   deletePlayer(id: string) {
-    console.log('clic')
     const test = `${environment.api_base_url}/posts/` + id
     return this.http.delete(test, { responseType: 'text' })
   }
@@ -28,15 +28,15 @@ export class JoueursService {
 
     return this.http.post<any>(`${environment.api_base_url}/player`,
       {
-        "nom": lastName,
-        "prenom": firstName,
+        "lastName": lastName,
+        "firstName": firstName,
         "nbMatch": 0,
-        "nbVictoire": 0,
-        "nbDefaite": 0,
+        "nbWin": 0,
+        "nbLoose": 0,
         "nbPoint": 0,
-        "pointPour": 0,
-        "pointContre": 0,
-        "differencePoints": 0
+        "pointFor": 0,
+        "pointAgainst": 0,
+        "pointDifference": 0
       }).subscribe(data => {
         this.postId = data.id
       })
@@ -49,8 +49,6 @@ export class JoueursService {
       }),
       observe: 'response' as 'body'
     };
-    console.log(playerOne + playerTwo +" "+scoreOne)
     return this.http.post<any>(`${environment.api_base_url}/player/` + playerOne + "/" + playerTwo + "/" + scoreOne + "/" + scoreTwo + "/" + scoreThree, httpOptions).subscribe()
   }
-
 }
