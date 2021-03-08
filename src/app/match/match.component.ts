@@ -12,13 +12,13 @@ export class MatchComponent implements OnInit {
   public selectedPlayerOne = '';
   public selectedPlayerTwo = '';
 
-  public score1jrs1 = '';
-  public score2jrs1 = '';
-  public score3jrs1 = '';
+  public score1jrs1 = '0';
+  public score2jrs1 = '0';
+  public score3jrs1 = '0';
 
-  public score1jrs2 = '';
-  public score2jrs2 = '';
-  public score3jrs2 = '';
+  public score1jrs2 = '0';
+  public score2jrs2 = '0';
+  public score3jrs2 = '0';
 
   public scoreManche1 = '';
   public scoreManche2 = '';
